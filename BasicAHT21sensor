@@ -1,0 +1,13 @@
+Stupid basic ESP-32 AHT-21 Temp/humid sensor.
+
+
+if(aht20.startMeasurementReady(/* crcEn = */true)){
+    // Get temp in Fahrenheit (F)
+    Serial.print(aht20.getTemperature_F());
+    Serial.print(" Freedom Units \t");
+    Serial.print(" Humidity ");
+    // Get relative humidity (%RH), range 0-100℃
+    Serial.print(aht20.getHumidity_RH());
+    Serial.println("%");
+    delay(2000);
+  }
